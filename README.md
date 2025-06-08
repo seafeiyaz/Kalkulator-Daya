@@ -47,3 +47,4 @@ Setelah Python terinstall, ikuti langkah-langkah berikut:
 ``` bash
 python "Kalkulator Daya.py"
 ```
+Jendela aplikasi "Kalkulator Rangkaian Listrik" akan muncul.
