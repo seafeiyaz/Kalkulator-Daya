@@ -23,7 +23,7 @@ class CustomSourceDialog(simpledialog.Dialog):
         self.current_entry.grid(row=1, column=1, padx=5, pady=5)
         self.current_var.set(str(self.initial_current))
         
-        return self.voltage_entry # initial focus
+        return self.voltage_entry
 
     def apply(self):
         try:
@@ -186,7 +186,7 @@ class CircuitCalculatorApp:
         self.selected_canvas_item_group_tag = None 
         self.is_wiring = False
         self.current_wire_points = []
-        self.current_wire_c_points_info = [] # Stores start/end CP info
+        self.current_wire_c_points_info = []
         self.temp_wire_id = None
 
         self._draw_grid()
@@ -262,7 +262,6 @@ class CircuitCalculatorApp:
             self.circuit_canvas.coords(wire_data['main_id'], *flat_path)
 
     # --- Electrical Node Analysis & Circuit Simplification ---
-
     def _get_cp_tuple_from_wire_info(self, cp_info):
         if not cp_info: return None
         return (cp_info['component_group_tag'], cp_info['cp_index'])
@@ -534,7 +533,7 @@ class CircuitCalculatorApp:
                     n1, n2 = key
                     resistors.append([new_expr, new_val, n1, n2])
                     for i in indices:
-                        resistors[i][1] = -1 # Mark for deletion
+                        resistors[i][1] = -1
                     simplified_in_pass = True
                     break
             
@@ -547,7 +546,6 @@ class CircuitCalculatorApp:
         if len(resistors) == 1:
             final_expr, _, n1, n2 = resistors[0]
             if tuple(sorted((n1, n2))) == tuple(sorted((source_node_id1, source_node_id2))):
-                # Clean up expression: remove outer parenthesis if it's the whole expression
                 if final_expr.startswith('(') and final_expr.endswith(')'):
                     final_expr = final_expr[1:-1]
                 return "Ekspresi berhasil dibuat.", final_expr
@@ -858,7 +856,6 @@ class CircuitCalculatorApp:
             
             if data_del:
                 element_type_for_status = data_del.get('type', 'Elemen').capitalize()
-                # If deleting a component, also delete connected wires
                 if data_del['type'] != 'wire':
                     wires_to_remove_indices = []
                     for i, el in enumerate(self.canvas_elements):
@@ -1172,12 +1169,11 @@ class CircuitCalculatorApp:
             note_parts.append(f"Ekspresi Resistor: {r_expr_visual}")
             transferred_something = True
         else:
-            # Fallback to listing individual resistors if expression fails
             resistor_values_visual = [elem['value'] for elem in self.canvas_elements if elem['type'] == 'resistor']
             if resistor_values_visual:
                 self.resistors_str_var.set(", ".join(map(str, resistor_values_visual)))
                 note_parts.append(f"Resistor individual (tidak dapat membuat ekspresi): {', '.join(map(str, resistor_values_visual))} Ω")
-                note_parts.append(f"({expr_status})") # Add reason for failure
+                note_parts.append(f"({expr_status})")
                 transferred_something = True
             else:
                 self.resistors_str_var.set("") 
