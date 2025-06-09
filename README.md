@@ -17,7 +17,7 @@ Berikut adalah cara menginstall Python jika belum terinstall.
 3. Jalankan file .exe yang sudah diunduh.
 4. Klik "Install Now" dan ikuti prosesnya hingga selesai.
 
-  *_*PENTING: Pada jendela instalasi pertama, pastikan Anda mencentang kotak "Add Python to PATH" di bagian bawah._*
+  *_*PENTING: Pada jendela instalasi pertama, pastikan mencentang kotak "Add Python to PATH" di bagian bawah._*
 
 # macOS
 1. Kunjungi python.org/downloads/ dan unduh installer untuk macOS.
@@ -42,7 +42,7 @@ Jika muncul Python 3.x.x, maka instalasi telah berhasil.
 Setelah Python terinstall, ikuti langkah-langkah berikut:
 1. Simpan file kode dari proyek ini dengan nama ``Kalkulator Daya.py.``
 2. Buka Terminal (di macOS/Linux) atau Command Prompt (di Windows).
-3. Arahkan terminal ke direktori (folder) tempat Anda menyimpan file Kalkulator Daya.py.
+3. Arahkan terminal ke direktori (folder) tempat menyimpan file Kalkulator Daya.py.
 4. Jalankan program dengan perintah di bawah ini:
 ``` bash
 python "Kalkulator Daya.py"
