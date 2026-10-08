@@ -1,26 +1,36 @@
-# Folder cache Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Folder Virtual Environment
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Virtual environments
 venv/
 env/
 .venv/
 .env/
+ENV/
 
-# File spesifik sistem operasi
-.DS_Store
-Thumbs.db
-
-# File konfigurasi IDE/Editor
+# IDE and editor settings
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 *.sublime-project
 *.sublime-workspace
 
-# File sensitif (JANGAN PERNAH UNGGAH INI)
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets and local configurations
 .env
-*.env
+*.env.local
 secrets.txt

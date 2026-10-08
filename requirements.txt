@@ -1,0 +1,10 @@
+# Electrical Circuit & Power Calculator
+# No third-party packages required!
+# This application relies exclusively on the Python standard library (Python >= 3.8):
+# - tkinter / ttk (GUI framework)
+# - math (numerical calculations)
+# - re (regular expressions)
+# - unittest (test suite)
+
+# On Linux (Ubuntu/Debian), install the tkinter package if not present:
+# sudo apt-get install python3-tk

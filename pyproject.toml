@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "circuit-power-calculator"
+version = "2.0.0"
+description = "A desktop application for electrical circuit analysis, VIPR Ohm's law solving, and visual schematic network reduction."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "MuhammadWPA", email = "seafeiyaz@users.noreply.github.com" }
+]
+keywords = ["circuit", "electronics", "power-calculator", "tkinter", "ohm-law", "schematic"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+]
+
+[project.scripts]
+circuit-calculator = "circuit_calculator.ui.app:main"
